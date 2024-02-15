@@ -1,0 +1,7 @@
+.title-proj{
+  font-size: clamp(16px, 9vw, 2.6rem);
+}
+
+.paragraph{
+  font-size: clamp(12px, 4vw, 16px);
+}

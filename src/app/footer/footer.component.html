@@ -1,0 +1,37 @@
+<section class="bg-base-200 ">
+  <footer class="footer p-10 bg-base-200 text-base-content max-w-7xl mx-auto font-poppins">
+    <aside>
+      <span class="logo inline-flex items-center flex-nowrap gap-2 normal-case text-lg sm:text-2xl tracking-normal ">
+        <img class="rounded-[5px] w-8 sm:w-12" src="../assets/logo.png" alt="logo">
+       nivinMichael.in
+       </span>
+      <h1 class="text-sm">Providing reliable tech</h1>
+    </aside>
+    <nav>
+      <header class="footer-title">Quick Links</header>
+      <button (click)="scrollToElementById('about')" class="link link-hover">About</button>
+      <button (click)="scrollToElementById('services')" class="link link-hover">Services</button>
+      <button (click)="scrollToElementById('projects')" class="link link-hover">Projects</button>
+      <button (click)="scrollToElementById('contact')" class="link link-hover">Contact</button>
+    </nav>
+    <nav>
+      <header class="footer-title gap-3">Contact</header>
+      <a href="https://wa.me/916238002737?text=Hello%2C%20I%20have%20a%20question" class="link link-hover">
+        <span><i class="fa-brands fa-whatsapp"></i></span>
+        +91 6238002737
+      </a>
+      <a href="mailto:nivin.official017@gmail.com" class="link link-hover">
+        <span><i class="fa-solid fa-envelope"></i></span>
+        nivin.official017&#64;gmail.com
+      </a>
+      <a href="tel:+919497505820" class="link link-hover">
+        <span><i class="fa-solid fa-phone"></i></span>
+        +91 9497505820
+      </a>
+    </nav>
+    <nav>
+      <header class="footer-title">Legal</header>
+      <button (click)="scrollToTop()" class="link link-hover" routerLink="terms-of-service">Terms of Service</button>
+    </nav>
+  </footer>
+</section>

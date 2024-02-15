@@ -1,0 +1,68 @@
+
+
+<!-- Hero section starts -->
+<div id="heroSection" class="hero font-poppins bg-base-100  mx-auto overflow-y-hidden p-0 m-16">
+  <div class="hero-content grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <!-- words col -->
+    <div class="col-span-1 sm:col-span-1">
+      <h1 class="title-proj font-bold"> Project Sync </h1>
+      <h1 class="sub-title font-bold bg-gradient-to-tl from-violet-700 via-purple-600 to-blue-300 bg-clip-text text-transparent py-2">CRM + Task Management software <span class="bg-none text-slate-300"><i class="fa-solid fa-list-check"></i></span></h1>
+      <p class="paragraph my-6 w-full pe-0 sm:pe-3 font-light">A CRM + Task Management software integrates functions, empowering teams to enhance customer relationships. Centralizing data, fostering collaboration, and efficient task management ensure a cohesive work environment, improving overall efficiency and meeting organizational needs.</p>
+      <button (click)="redirectToNewTab('https://projectsync.nivinmichael.in')" class="btn bg-transparent normal-case border-none hover:bg-transparent   relative group mt-3 hover:text-primary p-0 font-light">
+        View project
+        <span class="align-middle transition-transform transform translate-x-0 group-hover:translate-x-1">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </button>
+    </div>
+    <!-- img col -->
+    <div class="col-span-1 sm:col-span-1 flex relative overflow-hidden ps-3 sm:overflow-visible ">
+      <swiper-container effect="cards"
+                        loop="true"
+                        autoplay="true"
+                        speed="300"
+                        cards-effect-slide-shadows="false"
+                        grab-cursor="true"
+                        rotate="true"
+                        perSlideOffset="1"
+                        perspective="true"
+                        class="mySwiper w-full h-full py-3 flex justify-center align-middle bg-transparent">
+        <swiper-slide class="flex justify-center items-center bg-transparent shadow-none ">
+          <!-- mockup -->
+          <div class="mockup-browser border bg-base-300 w-[95%] overflow-hidden">
+            <div class="mockup-browser-toolbar">
+              <div class="input text-xs sm:text-sm py-1">https://projectsync.nivinmichael.in</div>
+            </div>
+            <div class="flex justify-center bg-base-200">
+              <img width="100%" class="bg-transparent object-cover" src="../../assets/projectsync-dashboard.png" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="flex justify-center items-center bg-transparent shadow-none">
+           <!-- mockup -->
+           <div class="mockup-browser border bg-base-300 w-[90%] overflow-hidden">
+            <div class="mockup-browser-toolbar">
+              <div class="input text-xs sm:text-sm py-1">https://projectsync.nivinmichael.in</div>
+            </div>
+            <div class="flex justify-center bg-base-200">
+              <img width="100%" class="bg-transparent object-cover" src="../../assets/projectsync-CRM.png" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="flex justify-center items-center bg-transparent shadow-none">
+          <!-- mockup -->
+          <div class="mockup-browser border bg-base-300 w-[90%] overflow-hidden">
+            <div class="mockup-browser-toolbar">
+              <div class="input text-xs sm:text-sm py-1">https://projectsync.nivinmichael.in</div>
+            </div>
+            <div class="flex justify-center bg-base-200">
+              <img width="100%" class="bg-transparent object-cover" src="../../assets/Projectsync - Tasks.png" alt="">
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>
+<!-- Hero section ends -->
+

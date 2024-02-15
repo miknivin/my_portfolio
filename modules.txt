@@ -1,0 +1,4 @@
+
+1. angular material - ng add @angular/material
+2.Tailwind css -npm install -D tailwindcss
+3.Create tailind.config.ts - npx tailwindcss init

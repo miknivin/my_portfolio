@@ -1,0 +1,19 @@
+.title-proj{
+  font-size: clamp(16px, 9vw, 2.6rem);
+}
+
+.paragraph{
+  font-size: clamp(12px, 4vw, 16px);
+}
+
+
+ .swiper-button-prev{
+  color: beige !important;
+  background-color: azure !important;
+}
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+{
+  background-color: aquamarine !important;
+}

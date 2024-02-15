@@ -1,0 +1,56 @@
+
+  <div>
+    <app-hero id="hero" class="scroll-snap-item"></app-hero>
+    <app-services id="services" class="scroll-snap-item"></app-services>
+    <app-about id="about" class="scroll-snap-item"></app-about>
+    <app-projects id="projects" class="scroll-snap-item"></app-projects>
+    <app-testimonials class="scroll-snap-item"></app-testimonials>
+    <app-contact-form id="contact" class="scroll-snap-item"></app-contact-form>
+
+    <!-- spead dial -->
+    <div class="boundary max-w-screen overflow-hidden">
+      <div id="drag"  cdkDragBoundary=".w-screen">
+        <div   class="fixed right-3 bottom-3 group sm:p-8 z-[99999999] transition-all ease-in delay-500" >
+          <!-- <div class="indicator">
+            <span class="indicator-item indicator-end badge badge-neutral p-3 rounded-full cursor-move">
+              <svg class="fill-white text-xs w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16C13.1 16 14 16.9 14 18S13.1 20 12 20 10 19.1 10 18 10.9 16 12 16M12 10C13.1 10 14 10.9 14 12S13.1 14 12 14 10 13.1 10 12 10.9 10 12 10M12 4C13.1 4 14 4.9 14 6S13.1 8 12 8 10 7.1 10 6 10.9 4 12 4M6 16C7.1 16 8 16.9 8 18S7.1 20 6 20 4 19.1 4 18 4.9 16 6 16M6 10C7.1 10 8 10.9 8 12S7.1 14 6 14 4 13.1 4 12 4.9 10 6 10M6 4C7.1 4 8 4.9 8 6S7.1 8 6 8 4 7.1 4 6 4.9 4 6 4M18 16C19.1 16 20 16.9 20 18S19.1 20 18 20 16 19.1 16 18 16.9 16 18 16M18 10C19.1 10 20 10.9 20 12S19.1 14 18 14 16 13.1 16 12 16.9 10 18 10M18 4C19.1 4 20 4.9 20 6S19.1 8 18 8 16 7.1 16 6 16.9 4 18 4Z" /></svg>
+            </span>
+          </div> -->
+          <div [ngClass]="{'flex': isHovered, 'hidden': !isHovered}"
+            class="flex-col items-center mb-4 space-y-2">
+              <button *ngIf="isHovered" (click)="redirectToNewTab('mailto:nivin.official017@gmail.com')" type="button" data-tip="Email Me" class="tooltip tooltip-left flex justify-center items-center font-poppins w-[52px] h-[52px] text-purple-800 hover:text-gray-900 bg-blue-300 rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                <i class="fa-solid fa-envelope text-xl"></i>
+                  <span class="sr-only">Email</span>
+              </button>
+              <button *ngIf="isHovered" (click)="redirectToNewTab('https://wa.me/916238002737?text=Hello%2C%20I%20have%20a%20question')" type="button" data-tip="Contact Me" class="tooltip tooltip-left flex font-poppins justify-center items-center w-[52px] h-[52px] text-purple-800 hover:text-gray-900 bg-blue-300 rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-white shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                  <span class="sr-only">contact</span>
+              </button>
+          </div>
+          <button (click)="rotateIcon()" type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default" aria-expanded="false" class="flex items-center justify-center text-white bg-primary rounded-full w-14 h-14 hover:bg-primary/70 dark:bg-primary focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-200">
+              <!-- your-component.component.html -->
+              <svg
+               [ngClass]="{'rotate-45': isRotated}"
+              class="w-5 h-5 transition-transform"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 18 18"
+              >
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
+              </svg>
+
+              <span class="sr-only">Open actions menu</span>
+          </button>
+          <!-- scroll to top  -->
+          <button  id="scroll-button" type="button" (click)="scrollToElementById('hero')"  aria-expanded="false" [ngClass]="{'flex': !hideScrollBtn, 'hidden': hideScrollBtn}" class="items-center justify-center mt-5 text-white bg-primary rounded-full w-14 h-14 hover:bg-primary/70 dark:bg-primary focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-200">
+            <!-- your-component.component.html -->
+            <i class="fa-solid fa-chevron-up"></i>
+
+            <span class="sr-only">Open actions menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+

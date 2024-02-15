@@ -1,0 +1,12 @@
+swiper-slide{
+  background-color: transparent !important;
+}
+
+.tab-active{
+  background-color: #6e2bdb !important;
+}
+
+.swiper-button-prev{
+  color: beige !important;
+  background-color: azure !important;
+}

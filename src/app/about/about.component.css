@@ -1,0 +1,13 @@
+.sticky-image{
+  position: sticky;
+  top: 0; /* Adjust this value as needed to control the stickiness */
+  z-index: 30; /* Ensure it's above other elements */
+}
+
+.para-clamp{
+  font-size: clamp(0.5rem,2vw,0.875rem)
+}
+
+.sub-clamp{
+  font-size: clamp(0.7rem,3vw,1.25rem)
+}

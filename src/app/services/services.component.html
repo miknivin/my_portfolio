@@ -1,0 +1,90 @@
+<div id="services" class="font-poppins pb-12 bg-base-100" [@cardAnimation]>
+  <div class="text-center">
+    <h1 class="text-5xl font-poppins font-bold py-8">Services</h1>
+  </div>
+
+  <div class="relative py-10">
+    <div class="container relative m-auto px-6 text-gray-500 md:px-12 hero-content">
+      <div class="grid gap-6 md:mx-auto md:w-8/12 lg:w-full  lg:grid-cols-3" >
+        <div  class="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-base-300  px-6 py-10 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none .service-card">
+          <img
+            class="mx-auto w-24"
+            src="../../assets/services/online-store.png"
+            alt="ecommerce illustration"
+            loading="lazy"
+          />
+          <h2 class="text-center text-2xl font-semibold">E Commerce</h2>
+          <p [ngClass]="{'line-clamp-4': !removeLineClamp}" class="text-sm font-light line-clamp-4">
+            Elevate your online store with a modern and user-friendly E-Commerce solution. I specialize in creating visually stunning websites that ensure a seamless shopping experience. Let's collaborate to bring your products to the forefront of the digital landscape.
+          </p>
+
+
+          <span (click)="removeLineClamp = !removeLineClamp" class="text-info cursor-pointer">{{removeLineClamp?"less &uparrow;":"more &downarrow;"}}</span>
+          <button
+            (click)="openDialog('Ecommerce')"
+            class="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
+          >
+            <span class="text-primary font-bold">&rightarrow;</span>
+          </button>
+        </div>
+        <div class="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-base-300  px-6 py-10 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none .service-card" >
+          <img
+            class="mx-auto w-24"
+            src="../../assets/services/Website.png"
+            alt="website illustration"
+            loading="lazy"
+          />
+          <h2 class="text-center text-2xl font-semibold">Website</h2>
+          <p  [ngClass]="{'line-clamp-4': !removeLineClamp2}" class="text-sm font-light line-clamp-4">
+            I create visually appealing, interactive, unique, and user-friendly websites that effectively communicate your brand's message. Together, we'll craft intuitive layouts, engaging visuals, and seamless navigation for an outstanding user experience.
+          </p>
+          <span (click)="removeLineClamp2 = !removeLineClamp2" class="text-info cursor-pointer">{{removeLineClamp2?"less &uparrow;":"more &downarrow;"}}</span>
+          <button
+            (click)="openDialog('Website')"
+            class="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
+          >
+            <span class="text-primary font-bold">&rightarrow;</span>
+          </button>
+        </div>
+        <div class="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-base-300  px-6 py-10 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none .service-card">
+          <img
+            class="mx-auto w-24"
+            src="../../assets/services/landing-page.png"
+            alt="landing-page illustration"
+            loading="lazy"
+          />
+          <h2 class="text-center text-2xl font-semibold">Landing Pages</h2>
+          <p  [ngClass]="{'line-clamp-4': !removeLineClamp3}" class="text-sm font-light line-clamp-4">
+            Boost conversions with compelling and sales-oriented Landing Pages that perfectly convey your brand's message. Join forces with me to craft high-converting layouts, engaging visuals, and seamless navigation for an exceptional user experience.          </p>
+          <span (click)="removeLineClamp3 = !removeLineClamp3" class="text-info cursor-pointer">{{removeLineClamp3?"less &uparrow;":"more &downarrow;"}}</span>
+          <button
+            (click)="openDialog('Landing Page')"
+            class="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
+          >
+            <span class="text-primary font-bold">&rightarrow;</span>
+          </button>
+        </div>
+        <div class="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-base-300  px-6 py-10 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none .service-card">
+          <img
+            class="mx-auto w-24"
+            src="../../assets/services/automation.png"
+            alt="business automation illustration"
+            loading="lazy"
+          />
+          <h2 class="text-center text-2xl font-semibold">Business Automation</h2>
+          <p  [ngClass]="{'line-clamp-4': !removeLineClamp4}" class="text-sm font-light line-clamp-4">
+            Business Automation revolutionizes efficiency by eliminating repetitive tasks, fostering cross-platform integration, and streamlining processes. Let's collaborate to say goodbye to manual drudgery and welcome a seamless, error-free workflow, optimizing your resources for sustainable growth.          </p>
+          <span (click)="removeLineClamp4 = !removeLineClamp4" class="text-info cursor-pointer">{{removeLineClamp4?"less &uparrow;":"more &downarrow;"}}</span>
+          <button
+            (click)="openDialog('Business Automation')"
+            class="relative mx-auto flex h-10 w-10 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-100 dark:before:border-gray-600 before:transition before:duration-300 group-hover:before:scale-125"
+          >
+            <span class="text-primary font-bold">&rightarrow;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

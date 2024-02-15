@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn--upload{
+  display: inherit !important;
+  line-height: 2 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 5rem; /* Adjust the value based on the height of your header */
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.scroll-snap-item {
+  scroll-snap-align: start;
+}
+
+@keyframes scale-up {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.scale-up {
+  animation: scale-up 0.5s ease-out forwards;
+}
+
+.scale-down{
+  animation: scale-up 0.5s ease-out reverse;
+}
+
+.wa-chat-box-poweredby{
+  display: none !important;
+}

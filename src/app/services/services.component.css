@@ -1,0 +1,27 @@
+@keyframes gradientAnimation {
+  0%, 100% {
+      background-position: left;
+  }
+
+  50% {
+      background-position: 40% 0%;
+  }
+}
+
+/* @-webkit-keyframes  gradientAnimation {
+  0%, 100% {
+      background-position: left;
+  }
+
+  50% {
+      background-position: right;
+  }
+} */
+
+
+#heroSection{
+  /* background-image: radial-gradient(circle at 100% 50%, hsla(286.15384615384613, 0.00%, 0.00%, 1.00), rgb(89, 86, 255) 45%,rgb(3, 0, 183) 70%, hsla(0, 0.00%, 100.00%, 0.00)); */
+  background-image: linear-gradient(to bottom, rgba(20, 19, 19, 0), rgba(0, 0, 0, 0)), linear-gradient(268deg, rgb(89, 86, 255), rgba(9, 6, 202, 0.485) 25%, hsla(156.9642857142857, 0.00%, 0.00%, 0.00));
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s linear infinite;
+}
