@@ -1,133 +1,56 @@
-
 <section>
-  <div class="hero font-poppins bg-base-100  mx-auto overflow-y-hidden p-0 m-10">
+  <!-- Loop through the projects array -->
+  <div *ngFor="let project of projects; let i = index"
+       class="hero font-poppins bg-base-100 mx-auto overflow-y-hidden p-0 m-10"
+       >
+
     <div class="hero-content grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <!-- words col -->
-      <div class="col-span-1 sm:col-span-1 flex flex-col items-start justify-items-start">
-        <h1 class="title-proj text-5xl font-bold">Growth Hacking</h1>
-        <h1 class="sub-title font-bold bg-gradient-to-tl from-violet-700 via-purple-600 to-blue-300 bg-clip-text text-transparent pt-2">Growth Hacking Course Landing Page <span class="bg-none text-slate-300"><i class="fa-regular fa-window-maximize"></i></span></h1>
-        <p class="paragraph my-6 w-full pe-3 font-light md:w-[95%]">Successfully developed and launched a landing page for a Growth Hacking course project, showcasing effective design and compelling content to engage and attract target audiences</p>
-        <button (click)="redirectToNewTab('https://course.dailyskills.co.in')" class="btn bg-transparent normal-case border-none hover:bg-transparent  relative group mt-3 hover:text-primary p-0 font-light">
-          View Project
-          <span class="align-middle transition-transform transform translate-x-0 group-hover:translate-x-1">
-            <i class="fa-solid fa-arrow-right"></i>
-          </span>
-        </button>
-      </div>
-      <!-- img col -->
-      <div class="col-span-1 sm:col-span-1 flex relative overflow-hidden ps-3 sm:overflow-visible pt-5 sm:pt-0">
-        <swiper-container effect="cards"
-                          loop="true"
-                          autoplay="true"
-                          speed="600"
-                          cards-effect-slide-shadows="false"
-                          pauseOnMouseEnter="true"
-                          grab-cursor="true"
-                          rotate="true"
-                          class="mySwiper h-full flex justify-center align-middle bg-transparent w-[90%] sm:w-full">
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none ">
-            <!-- mockup -->
-            <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
-              <div class="mockup-browser-toolbar">
-                <div class="input text-xs sm:text-sm align-middle py-1">https://course.dailyskills.co.in</div>
-              </div>
-              <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                <img  class="bg-transparent w-fit" src="../../assets/business-webites/growth hacking/growth hacking-1.webp" alt="">
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none">
-            <!-- mockup -->
-              <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
-                <div class="mockup-browser-toolbar">
-                  <div class="input text-xs sm:text-sm align-middle py-1">https://course.dailyskills.co.in</div>
-                </div>
-                <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                  <img  class="bg-transparent w-fit" src="../../assets/business-webites/growth hacking/growth hacking-2.webp" alt="">
-                </div>
-              </div>
-          </swiper-slide>
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none">
-            <!-- mockup -->
-            <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
-              <div class="mockup-browser-toolbar">
-                <div class="input text-xs sm:text-sm align-middle py-1">https://course.dailyskills.co.in</div>
-              </div>
-              <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                <img  class="bg-transparent w-fit" src="../../assets/business-webites/growth hacking/growth hacking-3.webp" alt="">
-              </div>
-            </div>
-          </swiper-slide>
-        </swiper-container>
-      </div>
-    </div>
-  </div>
-   <!-- second business project -->
-  <div class="hero font-poppins bg-base-100  mx-auto overflow-y-hidden p-0 m-10">
-    <div class="hero-content grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <!-- words col -->
-      <div class="col-span-1 sm:col-span-1 order-1 sm:order-2 flex flex-col items-start md:ps-8">
-        <h1 class="title-proj text-5xl font-bold">Online TPR</h1>
-        <h1 class="sub-title font-bold bg-gradient-to-tl from-violet-700 via-purple-600 to-blue-300 bg-clip-text text-transparent pt-2 ">Thought Process Re-Engineering Course Landing Page <span class="bg-none text-slate-300"><i class="fa-regular fa-window-maximize"></i></span></h1>
-        <p class="paragraph my-6 w-full pe-3 font-light md:w-[95%]">Effectively created and launched a landing page for an online thought process re-engineering project, featuring engaging design and compelling content to captivate and attract the intended audience</p>
-        <button (click)="redirectToNewTab('https://tpr.sajeevnair.com')" class="btn bg-transparent normal-case border-none hover:bg-transparent  relative group mt-3 hover:text-primary p-0 font-light">
+      <!-- Words column -->
+      <div class="col-span-1 sm:col-span-1 flex flex-col items-start md:ps-8"
+           [ngClass]="{'order-1 sm:order-2': i % 2 !== 0, 'order-2 sm:order-1': i % 2 === 0}">
+        <h1 class="title-proj text-5xl font-bold">{{ project.title }}</h1>
+        <h1 class="sub-title font-bold bg-gradient-to-tl from-violet-700 via-purple-600 to-blue-300 bg-clip-text text-transparent pt-2">
+          {{ project.subtitle }} <span class="bg-none text-slate-300"><i class="fa-regular fa-window-maximize"></i></span>
+        </h1>
+        <p class="paragraph my-6 w-full pe-3 font-light md:w-[95%]">{{ project.description }}</p>
+        <button (click)="redirectToNewTab(project.link)"
+                class="btn bg-transparent normal-case border-none hover:bg-transparent relative group mt-3 hover:text-primary p-0 font-light">
           View project
           <span class="align-middle transition-transform transform translate-x-0 group-hover:translate-x-1">
             <i class="fa-solid fa-arrow-right"></i>
           </span>
         </button>
       </div>
-      <!-- img col -->
-      <div class="col-span-1 sm:col-span-1 order-2 sm:order-1 flex relative overflow-hidden pe-0 sm:px-3 sm:overflow-visible pt-5 sm:pt-0">
-        <swiper-container effect="cards"
-                          loop="true"
-                          autoplay="true"
-                          speed="600"
-                          cards-effect-slide-shadows="false"
-                          pauseOnMouseEnter="true"
-                          grab-cursor="true"
-                          rotate="true"
+
+      <!-- Image column -->
+      <div class="col-span-1 sm:col-span-1 flex relative overflow-hidden pe-0 sm:px-3 sm:overflow-visible pt-5 sm:pt-0"
+           [ngClass]="{'order-2 sm:order-1': i % 2 !== 0, 'order-1 sm:order-2': i % 2 === 0}">
+        <swiper-container effect="cards" loop="true" autoplay="true" speed="600" cards-effect-slide-shadows="false"
+                          pause-on-mouse-enter="true" grab-cursor="true" rotate="true"
                           class="mySwiper h-full flex justify-center align-middle bg-transparent w-[90%] sm:w-full">
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none w-fit ">
-            <!-- mockup -->
+          <swiper-slide *ngFor="let image of project.images"
+                        class="flex justify-center items-center bg-transparent shadow-none w-fit">
+            <!-- Mockup -->
             <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
               <div class="mockup-browser-toolbar">
-                <div class="input text-xs sm:text-sm align-middle py-1">https://tpr.sajeevnair.com</div>
+                <div class="input text-xs sm:text-sm align-middle py-1">{{ project.link }}</div>
               </div>
               <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                <img  class="bg-transparent w-fit" src="../../assets/business-webites/tpr/tpr-1.png" alt="">
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none w-fit">
-            <!-- mockup -->
-              <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
-                <div class="mockup-browser-toolbar">
-                  <div class="input text-xs sm:text-sm align-middle py-1">https://tpr.sajeevnair.com</div>
-                </div>
-                <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                  <img  class="bg-transparent w-fit" src="../../assets/business-webites/tpr/tpr-2.png" alt="">
-                </div>
-              </div>
-          </swiper-slide>
-          <swiper-slide class="flex justify-center items-center bg-transparent shadow-none w-fit">
-            <!-- mockup -->
-            <div class="mockup-browser border-2 bg-base-300 w-[95%] overflow-hidden">
-              <div class="mockup-browser-toolbar">
-                <div class="input text-xs sm:text-sm align-middle py-1">https://tpr.sajeevnair.com</div>
-              </div>
-              <div class="flex justify-center border-gray-100 bg-base-200 p-1">
-                <img  class="bg-transparent w-fit" src="../../assets/business-webites/tpr/tpr-3.png" alt="">
+                <img class="bg-transparent w-fit" [src]="image" [alt]="project.title + ' image'">
               </div>
             </div>
           </swiper-slide>
         </swiper-container>
-
       </div>
     </div>
-    <!-- second business project -->
   </div>
 
+  <!-- Show More Button -->
+  <div class="w-full flex items-center justify-center">
+    <button class="btn btn-info btn-wide my-4" (click)="toggleThirdProject()">
+      {{ showMoreProject ? 'Show Less' : 'Show More' }}
+      <i class="fa-solid fa-arrow-down items-stretch transition transform duration-300"
+         [ngClass]="{'fa-arrow-down': true, 'rotate-180': showMoreProject }"></i>
+    </button>
+  </div>
 </section>
-
-

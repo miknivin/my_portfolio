@@ -13,19 +13,19 @@ export class ProjectsComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-        // Check if the query parameter is present
-        this.route.queryParams.subscribe(params => {
-          if (params['project']) {
-            // Set activeTab based on the query parameter
-            this.activeTab = params['project'];
-          }
-        });
+        // // Check if the query parameter is present
+        // this.route.queryParams.subscribe(params => {
+        //   if (params['project']) {
+        //     // Set activeTab based on the query parameter
+        //     this.activeTab = params['project'];
+        //   }
+        // });
   }
 
 
-  activateTab(tabName: string) {
-    this.activeTab = tabName;
-    // Navigate with query parameter
-    this.router.navigate(['/home'], { queryParams: { project: tabName } });
-  }
+  // activateTab(tabName: string) {
+  //   this.activeTab = tabName;
+  //   // Navigate with query parameter
+  //   this.router.navigate(['/home'], { queryParams: { project: tabName } });
+  // }
 }

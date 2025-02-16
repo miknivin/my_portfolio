@@ -17,3 +17,8 @@
 {
   background-color: aquamarine !important;
 }
+
+.direction-rtl {
+  direction: rtl;
+}
+

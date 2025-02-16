@@ -80,12 +80,12 @@ export class ContactFormComponent implements OnInit {
       .subscribe(
         (response) => {
           this.loading=false;
-          console.log('Contact created successfully:', response);
+          // console.log('Contact created successfully:', response);
           this.submitted=true
         },
         (error) => {
           this.loading = false;
-          console.error('Error creating contact:', error);
+          // console.error('Error creating contact:', error);
           // alert(`Error posting ${error}`)
           this.formError=true;
         }

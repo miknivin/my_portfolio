@@ -89,15 +89,15 @@ export class AppComponent implements OnInit  {
     this.menuMobile = !this.menuMobile
   }
 
-  scrollToComponent() {
-    if (this.aboutComponent && this.aboutComponent.first) {
-      if ('scrollIntoView' in this.aboutComponent.first.nativeElement) {
-        console.log('scrollIntoView is supported');
-      } else {
-        console.log('scrollIntoView is not supported');
-      }
-    }
-  }
+  // scrollToComponent() {
+  //   if (this.aboutComponent && this.aboutComponent.first) {
+  //     if ('scrollIntoView' in this.aboutComponent.first.nativeElement) {
+  //       console.log('scrollIntoView is supported');
+  //     } else {
+  //       console.log('scrollIntoView is not supported');
+  //     }
+  //   }
+  // }
 
   navigateTo(route: string) {
     this.router.navigate([route]);

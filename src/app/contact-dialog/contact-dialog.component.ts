@@ -1,8 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef,MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-
-
 import { ApiService } from '../service/api.service';
 @Component({
   selector: 'app-contact-dialog',
@@ -55,7 +53,7 @@ export class ContactDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllCOuntries()
-    console.log('Data received in ContactDialogComponent:', this.data);
+    // console.log('Data received in ContactDialogComponent:', this.data);
     this.services.forEach((service)=>{
       if (this.data === service.name) {
         service.selected = true;
@@ -72,14 +70,12 @@ export class ContactDialogComponent implements OnInit {
   onCountryChange(event: any) {
     const selectedCountryCode = event?.target?.value;
     if (selectedCountryCode) {
-      console.log('Selected Country Code:', selectedCountryCode);
-      // You can do whatever you need with the selectedCountryCode here
+      // console.log('Selected Country Code:', selectedCountryCode);
     }
   }
 
 
   onSubmit(){
-
     // Get the selected services
     const selectedServices = this.services.filter(service => service.selected).map(service => service.name);
 
@@ -103,7 +99,7 @@ export class ContactDialogComponent implements OnInit {
       .subscribe(
         (response) => {
           this.loading=false;
-          console.log('Contact created successfully:', response);
+          // console.log('Contact created successfully:', response);
           this.submitted=true
         },
         (error) => {

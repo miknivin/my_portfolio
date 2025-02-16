@@ -82,10 +82,6 @@ export class HeaderComponent {
     window.open(link, '_blank');
   }
 
-  rotateIcon() {
-    this.isRotated = !this.isRotated;
-    this.isHovered = !this.isHovered
-  }
 
   showMenu(){
     this.menuMobile = !this.menuMobile

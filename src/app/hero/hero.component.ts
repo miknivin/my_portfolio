@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactDialogComponent } from '../contact-dialog/contact-dialog.component';
 import { SharedService } from '../shared.service';
-
+import { trigger, transition, query, stagger, animate, style } from '@angular/animations';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
@@ -19,8 +19,6 @@ export class HeroComponent implements OnInit {
       this.isDarkMode = isDarkMode;
     });
   }
-
-
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ContactDialogComponent, {
